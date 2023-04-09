@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ProgressBar
+        android:id="@+id/progress_loader"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mulibold"
+        android:text="@string/search"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"/>
+    
+    <RelativeLayout
+        android:id="@+id/searchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_head"
+        android:padding="8dp"
+        android:layout_marginTop="10dp">
+        
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:hint="@string/searchongit"
+            android:elevation="8dp"
+            android:padding="12dp"
+            android:maxLines="1"
+            android:background="@drawable/rounded_background"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
+
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_background"
+            android:layout_toEndOf="@+id/edit_search"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sortlayout"
+        android:layout_below="@+id/searchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/labelsort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/mulibold"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:text="@string/sort"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/sortspinner"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/labelsort"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_git"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_below="@+id/sortlayout"/>
+
+
+</RelativeLayout>

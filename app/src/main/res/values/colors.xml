@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorError">@color/red_A700</color>
+
+    <color name="colorControlNormal">#000000</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="button_background">#055192</color>
+    <color name="grey_text">#424242</color>
+
+    <!--   other color -->
+    <color name="common_background">#ffe7e7e7</color>
+    <color name="colorDividerSecondary">#cccccc</color>
+    <color name="colorDivider">#F1EFEF</color>
+    <color name="cardBackgroundColor">#ffffff</color>
+    <color name="colorPrimaryButtonBg">#000000</color>
+    <color name="colorPrimaryButtonFg">#FFFFFF</color>
+
+    <!--other color-->
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <!-- extra colors-->
+    <color name="grey_60">#666666</color>
+
+    <color name="red_600">#E53935</color>
+    <color name="red_A700">#D50000</color>
+    <color name="green_600">#43A047</color>
+    <color name="orange_A700">#FF6D00</color>
+    <color name="grey_600">#757575</color>
+</resources>
