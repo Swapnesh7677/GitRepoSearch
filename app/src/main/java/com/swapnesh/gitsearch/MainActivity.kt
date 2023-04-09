@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(adapterView: AdapterView<*>, view: View?, i: Int, l: Long) {
                 value = adapterView.getItemAtPosition(i).toString()
 
-                if(!value.equals("Best match")){
-                    getData(value,pagecount)
+                if (!value.equals("Best match")) {
+                    getData(value, pagecount)
                 }
 
             }
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.editSearch.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if(s?.length==0){
+                if (s?.length == 0) {
                     gitData.clear()
                     getData(value, pagecount)
 
@@ -127,12 +127,11 @@ class MainActivity : AppCompatActivity() {
     private  fun getData(valuet: String, pagecountt: Int) {
         binding.progressLoader.visibility = View.VISIBLE
         mainVm.getRepos( binding.editSearch.text.toString(), valuet,"","asc", pagecountt).observe(this@MainActivity) {
-            if(it!=null){
-
+            if(it!=null)
                 setdata(it)
             }
-        }
     }
+
 
     private fun setdata(it: GItRepoResponse) {
         totalNumber = it.total_count
